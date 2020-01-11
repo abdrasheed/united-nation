@@ -1,0 +1,43 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.center{
+    text-align: center;
+}
+.color{
+    color:black
+}
+.none-left{
+    border-left: none;
+}
+.none-top{
+    border-top: none;
+}
+.none-bottom{
+    border-bottom: none;
+}
+.none-right{
+    border-right:none;
+}   
+table,th,td{
+border:2px solid rgb(141, 177, 253);
+border-collapse: collapse;
+
+}
+th{
+    color:rgb(148, 11, 11); ;
+    padding: 10px;
+    background: rgb(230, 229, 229);
+}       
+td{
+    color:rgb(104, 104, 104);
+    padding: 10px;
+}
+strong{
+    color: rgb(0, 0, 0);
+}
+#message{
+    display: inline; 
+    color: red;
+    font-size: 12px;
+}

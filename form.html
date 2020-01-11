@@ -1,0 +1,450 @@
+3<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="abdelrahman 120181168.css">
+        <script>
+            //this function for test input text
+            function testText(){
+                for (var i=1 ; i<=2 ; i++){
+                    var x = document.forms["form1"]["text"+i];
+                    if (x.value==""){
+                        alert("the input number [ "+i+" ] is empty ..please add input");
+                        return false;
+                    }else if(!isNaN(x.value)){
+                        alert("please enter text value in input number [ "+i+" ] ");
+                        return false;
+                    }
+                }   
+            }
+            function textNumber(){
+                for (var i=10 ; i<=16 ; i++){
+                    var h = document.forms["form1"]["number"+i];
+                    if (h.value==""){
+                        if(i >= 12){
+                            i++;
+                            alert("the input number [ "+i+" ] is empty ..please add input");
+                            return false;
+                        }
+                        alert("the input number [ "+i+" ] is empty ..please add input");
+                        return false;
+                    }else if(isNaN(h.value)){
+                        if(i >= 12){
+                            i++;
+                            alert("please enter number value in input number [ "+i+" ] ");
+                            return false;
+                        }
+                        alert("please enter number value in input number [ "+i+" ] ");
+                        return false;
+                    }          
+                }
+                
+            }
+            function validateEmail() {
+                 var emailID = document.form1.email.value;
+                 atpos = emailID.indexOf("@");
+                 dotpos = emailID.lastIndexOf(".");
+                 if(emailID == ""){ 
+                    alert('the input email [ 17 ] is empty ..please add input');
+                     return false;
+                 }
+                 else if (atpos < 1 || ( dotpos - atpos < 2 )) {
+                    alert("Please enter correct email ID in input number [ 17 ]")
+                    document.form1.email.focus() ;
+                    return false;
+                 }
+            }
+       
+        </script>
+    </head>
+    <body>
+        <main>
+            <form name="form1">
+            <table style="margin: 0 auto;border:6px double rgb(148, 11, 11);">
+                <tr>
+                    <td colspan="3"><strong style="margin-left:100px ">INSTRUCTION</strong><br><br>
+                    please answer each quastion cleary and<br> completley. TYPE OR PRINT LEGABLEY.<br>
+                    <strong>read</strong>carfuly and follow all dirction</td>
+                    <th colspan="4" style="padding-left: 25px;padding-right: 25px">UNITED NATIONS<BR><br>PERSONAL HISTORY</th>
+                    <td colspan="3"style="vertical-align: top;width:200px;">dont write in this space</td>
+                </tr>
+                <tr>
+                        
+                    <td colspan="2">1. fist name<br>1.
+                    <input type="text" name="text1"></td>
+                    <td colspan="2">middle name<br>2.
+                    <input type="text" name="text2"></td>
+                    <td colspan="3">family name<br>3.
+                    <input type="text" name="text3"></td>
+                    <td colspan="3">maiden name. if any<br>4.
+                    <input type="text" name="text4"></td>   
+                </tr>
+                <tr>
+                    <td colspan="2">2.data of birth<br>5.
+                        <input type="date" name="text5">
+                    </td>
+                    <td colspan="2">3.place of birth<br>6.
+                        <input type="text" name="text6">
+                    </td>
+                    <td colspan="2">4.nationality of birth<br>7.
+                        <input type="text" name="text7">
+                    </td>
+                    <td colspan="2">5.present nationality<br>8.
+                        <input type="text" name="text8">
+                    </td>
+                    <td colspan="2">6.sex<br>9.
+                        <input type="text" name="text9">
+                    </td>
+                </tr>
+                <tr>
+                    <td>7.height<br>10.
+                        <input type="number" name="number10">
+                    </td>
+                    <td colspan="2">8.wieght<br>11.
+                        <input type="number" name="number11">
+                    </td>
+                    <td colspan="7">9.material of status<br>
+                    single<input type="radio"name="t">
+                    Married<input type="radio"name="t">
+                    separated<input type="radio"name="t">
+                    widow(er)<input type="radio"name="t">
+                    Divorcid<input type="radio"name="l">
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="10">Entry into united nations service might requar asignment to any area of the world in which united nations
+                        maight have responsipilety.<br>
+                        (a) are there any limitations in your ability to performin your prospictive field of work? 
+                        YES<input type="radio"name="c">
+                        NO<input type="radio"name="c"><br>
+                        (b) are there any limitations in your ability to engage in all travel?  
+                        YES<input type="radio"name="c">
+                        NO<input type="radio"name="c">               
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="2">11. permanent address<br>10.
+                        <input type="text" name="text10"><br>
+                        <strong>Telephone No.(1234)</strong><br>13.
+                        <input type="text" name="number12">
+                    </td>
+                    <td rowspan="2" colspan="4">12. present address<br>11.
+                        <input type="text" name="text11"><br>
+                        <strong>Telephone/fax No.(1234)</strong><br>14.
+                        <input type="text" name="number13">
+                    </td>
+                    <td colspan="4">13.Office Telephone No.<br><strong>(2546)</strong><br>15.
+                        <input type="text" name="number14">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">14.Office Fax No.<br><strong>(2546)<br>Email:</strong>17.
+                        <input type="text" name="email"></td>
+                </tr>
+                <tr>
+                    <td colspan="10">15.do you have any dependent children?
+                        YES<input type="radio" name="b">
+                        NO<input type="radio" name="b">
+                        if the answer is "yes" give the following information.
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="3">Name of children</th>
+                    <th colspan="">Date of birth(day/mo/year)</th>
+                    <th colspan="2">place of birth</th>
+                    <th colspan="2">nationality</th>
+                    <th colspan="2">gender</th>
+                </tr>  
+                <tr style="height: 20px;text-align:center">
+                    <td colspan="3">
+                        12.<input type="text" name="text12">
+                    </td>
+                    <td>
+                        13.<input type="date" name="text13">
+                    </td>
+                    <td colspan="2">
+                        14.<input type="text" name="text14">
+                    </td>
+                    <td colspan="2">
+                        15.<input type="text" name="text15">
+                    </td>
+                    <td colspan="2">
+                        (male)<input type="radio" name="f">
+                        (female)<input type="radio" name="f">  
+                    </td>
+                </tr>
+                <tr style="height: 20px;text-align:center">
+                    <td colspan="3">
+                        16.<input type="text" name="text16">
+                    </td>
+                    <td>
+                        17.<input type="date" name="text17">
+                    </td>
+                    <td colspan="2">
+                        18.<input type="text" name="text18">
+                    </td>
+                    <td colspan="2">
+                        19.<input type="text" name="text19">
+                    </td>
+                    <td colspan="2">
+                        (male)<input type="radio" name="r">
+                        (female)<input type="radio" name="r"> 
+                    </td>
+                </tr>
+                <tr style="height: 20px;text-align:center">
+                    <td colspan="3">
+                        20.<input type="text" name="text20">
+                    </td>
+                    <td>
+                        21.<input type="date" name="text21">
+                    </td>
+                    <td colspan="2">
+                        22.<input type="text" name="text22">
+                    </td>
+                    <td colspan="2">
+                        23.<input type="text" name="text23">
+                    </td>
+                    <td colspan="2">
+                        (male)<input type="radio" name="r">
+                        (female)<input type="radio" name="r"> 
+                    </td>
+                </tr>
+                <tr style="height: 20px;text-align:center">
+                    <td colspan="3">
+                        24.<input type="text" name="text24">
+                    </td>
+                    <td>
+                        25.<input type="date" name="text25">
+                    </td>
+                    <td colspan="2">
+                        26.<input type="text" name="text26">
+                    </td>
+                    <td colspan="2">
+                        27.<input type="text" name="text27">
+                    </td>
+                    <td colspan="2">
+                        (male)<input type="radio" name="r">
+                        (female)<input type="radio" name="r"> 
+                    </td>
+                </tr>
+                <tr style="height: 20px;text-align:center">
+                    <td colspan="3">
+                        28.<input type="text" name="text28">
+                    </td>
+                    <td>
+                        29.<input type="date" name="text29">
+                    </td>
+                    <td colspan="2">
+                        30.<input type="text" name="text30">
+                    </td>
+                    <td colspan="2">
+                        31.<input type="text" name="text31">
+                    </td>
+                    <td colspan="2">
+                        (male)<input type="radio" name="r">
+                        (female)<input type="radio" name="r"> 
+                    </td>
+                </tr>
+                <tr style="height: 20px;text-align:center">
+                    <td colspan="3">
+                        32.<input type="text" name="text32">
+                    </td>
+                    <td>
+                        33.<input type="date" name="text33">
+                    </td>
+                    <td colspan="2">
+                        34.<input type="text" name="text34">
+                    </td>
+                    <td colspan="2">
+                        35.<input type="text" name="text35">
+                    </td>
+                    <td colspan="2">
+                        (male)<input type="radio" name="r">
+                        (female)<input type="radio" name="r"> 
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="3">15.(a) .Name of spouse<br><br></th>
+                    <td>
+                        36.<input type="text" name="text36">
+                    </td>
+                    <td colspan="2">
+                        37.<input type="text" name="text37">
+                    </td>   
+                    <td colspan="2">
+                        38.<input type="text" name="text38">
+                    </td>
+                    <td colspan="2">
+                        39.<input type="text" name="text39">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="10">have you taken up legal permanent residence status in any country other than that of your nationality ?
+                        YES<input type="radio" name="b">
+                        NO<input type="radio" name="b"><br>
+                        if answer is "yes".which country:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="10">have you taken up legal steps towords changing your present nationality?
+                        YES<input type="radio" name="b">
+                        NO<input type="radio" name="b"><br>
+                        if answer is "yes".explain fully:
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="10">Are anyof your relatives employedby by a public international organization ?
+                        YES<input type="radio" name="b">
+                        NO<input type="radio" name="b"><br>
+                        if answer is "yes". give the following information:
+                    </td>
+                </tr>
+                <tr style="height: 20px;">
+                    <th colspan="3">Name</th>
+                    <th colspan="2">Relationship</th>
+                    <th colspan="5">Name of international organization</th>
+                </tr>
+                <tr style="height: 20px;">
+                    <td colspan="3">
+                        40.<input type="text" name="text40">
+                    </td>
+                    <td colspan="2"> 
+                        41.<input type="text" name="text41">
+                    </td>
+                    <td colspan="5">
+                        42.<input type="text" name="text42">
+                    </td>
+                </tr>
+                <tr style="height: 20px;">
+                    <td colspan="3">
+                        43.<input type="text" name="text43">
+                    </td>
+                    <td colspan="2"> 
+                        44.<input type="text" name="text44">
+                    </td>
+                    <td colspan="5">
+                        45.<input type="text" name="text45">
+                    </td>
+                </tr>
+                <tr style="height: 20px;">
+                    <td colspan="3">
+                        46.<input type="text" name="text46">
+                    </td>
+                    <td colspan="2"> 
+                        47.<input type="text" name="text47">
+                    </td>
+                    <td colspan="5">
+                        48.<input type="text" name="text48">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="10">19.what is your preferred field to work?<br><br></td>
+                </tr>
+                <tr>
+                    <td colspan="3">20.would you accept employment for less than six month<br>
+                        YES<input type="radio" name="b">
+                        NO<input type="radio" name="b"><br></td>
+                    <td colspan="7">21.have you previously submitted ann application for employment and/or undergone any tests<br>with U.N.?
+                    YES<input type="radio" name="b">
+                    NO<input type="radio" name="b"><br></td>
+                </tr>
+                <tr>
+                    <td colspan="10" class="none-bottom">22. KNOWLEDGE OF LANGUAGES.What is your mother tonger?</td>
+                </tr>
+                <tr>
+                    <th colspan="2" rowspan="2" class="none-top" style="background:none; color:black">OTHER LANGUAGES<br><br></th>
+                    <th colspan="2"><strong>READ</strong></th>
+                    <th colspan="2"><strong>WRITE</strong></th>
+                    <th colspan="2"><strong>SPEAK</strong></th>
+                    <th colspan="2"><strong>UNDERSTAN</strong></th>
+                </tr>
+                <tr>
+                    <th>Easily</th>
+                    <th>Not Easily</th>
+                    <th>Easily</th>
+                    <th>Not Easily</th>
+                    <th>Fluntly</th>
+                    <th>Not Fluntly</th>
+                    <th>Easily</th>
+                    <th>Not Easily</th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        49.<input type="text" name="text49">
+                    </td>
+                    <td colspan="2" rowspan="4">
+                        50.<input type="text" name="text50">
+                    </td>
+                    <td colspan="2" rowspan="4"><br>
+                        51.<input type="text" name="text51">
+                    </td>
+                    <td colspan="2" rowspan="4"><br>
+                        52.<input type="text" name="text52">
+                    </td>
+                    <td colspan="2" rowspan="4"><br>
+                        53.<input type="text" name="text53">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        54.<input type="text" name="text54">
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        55.<input type="text" name="text55">
+                    </td> 
+                </tr>     
+                <tr>
+                    <td colspan="2">
+                        56.<input type="text" name="text56">
+                    </td> 
+                </tr>
+                <tr>
+                    <td colspan="4">23.For clerical grades only<br>
+                    <Span style="font-style: italic;">indicate speed in words per minute</Span></td>
+                    <td colspan="6" rowspan="5" style="vertical-align: top;border-left:6px double rgb(148, 11, 11)">List any officemachines or equipment and computer programmes you use<br><br><br>
+                        58.<textarea name="textd"cols="70" rows="15"></textarea><br>
+                        <input style="width: 150px; height: 50px; background: red; color: wheat;" type="submit" onclick="testText(),validateEmail(),textNumber()">.</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><br><br></td>
+                    <th rowspan="2"><br>English<br><br></th>
+                    <th rowspan="2"><br>french<br><br></th>
+                    <th>other langauges<br><br></th>
+                </tr>
+                <tr>
+                    <td>
+                        57.<input type="text" name="text57">
+                    </td>
+                </tr>
+                <tr>
+                    <th><br>Typing<br><br></th>
+                    <th>
+                        this.<input type="radio" name="tex">
+                    </th>
+                    <th>
+                        this.<input type="radio" name="tex">
+                    </th>
+                    <th>
+                        this.<input type="radio" name="tex">
+                    </th>
+
+                </tr>
+                <tr>
+                    <th><br>Shorthand<br><br></th>
+                    <th>
+                        this.<input type="radio" name="te">
+                    </th>
+                    <th>
+                        this.<input type="radio" name="te">
+                    </th>
+                    <th>
+                        this.<input type="radio" name="te">
+                    </th>
+                </tr>
+            </table>
+            
+        </form>
+        </main>
+    </body>
+</html>
